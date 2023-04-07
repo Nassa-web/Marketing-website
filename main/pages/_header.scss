@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 2.5rem;
+  @include respond(tabport) {
+    display: none;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    background-color: var(--white);
+    width: 4rem;
+    height: 4rem;
+    color: var(--main-color-2);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}

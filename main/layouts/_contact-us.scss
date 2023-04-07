@@ -1,0 +1,34 @@
+.contact-us {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  @include respond(tabport) {
+    grid-template-columns: 1fr;
+  }
+
+  &__content {
+    font-size: 1.9rem;
+  }
+  &__list {
+    margin-left: 1rem;
+    &__item {
+      position: relative;
+      font-size: 1.8rem;
+      font-weight: 800;
+
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: -13px;
+        top: 10px;
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 50%;
+        background-color: var(--black);
+      }
+    }
+  }
+}

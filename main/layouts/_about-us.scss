@@ -1,0 +1,29 @@
+.about-us {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @include respond(tabport) {
+    grid-template-columns: 1fr;
+  }
+
+  &__col {
+    display: grid;
+    grid-template-rows: max-content;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+
+    &--2 {
+      height: 34rem;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    @include respond(tabport) {
+      flex-direction: column;
+    }
+  }
+}

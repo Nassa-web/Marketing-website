@@ -1,0 +1,55 @@
+.form {
+  padding: 4rem;
+  background-color: var(--white);
+  border-radius: 2px;
+
+  &__label {
+    display: block;
+    font-size: 1.6rem;
+  }
+
+  &__input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.6rem;
+    border: none;
+    border-bottom: 1px solid var(--black);
+    padding: 0 1rem 1rem;
+    &::placeholder {
+      display: inline-block;
+      color: var(--light-grey-1);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__message {
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: var(--light-grey-1);
+    width: 100%;
+    height: 10rem;
+    border: none;
+    border-bottom: 1px solid var(--black);
+    padding: 0 1rem 1rem;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    background-color: var(--main-color-2);
+    color: var(--white);
+    font-size: 1.4rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--main-color-3);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-template-rows: 1fr max-content;
+  gap: 3rem;
+  @include respond(tabport) {
+    display: flex;
+    flex-direction: column;
+  }
+  &__image {
+    display: block;
+    object-fit: cover;
+
+    &--1 {
+      width: 55rem;
+      height: 55rem;
+      align-self: center;
+      grid-row: 1/-1;
+      @include respond(tabport) {
+        width: 100%;
+      }
+    }
+    &--2 {
+      width: 20rem;
+      height: 28rem;
+      align-self: end;
+      @include respond(tabport) {
+        width: 100%;
+      }
+    }
+    &--3 {
+      width: 60rem;
+      height: 30rem;
+      grid-column: 2/-1;
+      grid-row: 2/3;
+      @include respond(tabport) {
+        width: 100%;
+      }
+    }
+    &--4 {
+      height: 40rem;
+      width: 100%;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      @include respond(tabport) {
+        width: 100%;
+      }
+    }
+  }
+}

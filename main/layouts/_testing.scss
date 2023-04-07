@@ -1,0 +1,38 @@
+.testing {
+  position: relative;
+  display: flex;
+  gap: 3rem;
+  @include respond(tabport) {
+    flex-direction: column;
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__image {
+    display: block;
+    object-fit: cover;
+    &--1 {
+      width: 28rem;
+      align-self: flex-end;
+      @include respond(tabport) {
+        width: 100%;
+      }
+    }
+    &--2 {
+      width: 55rem;
+      height: -webkit-fill-available;
+      @include respond(tabport) {
+        width: 100%;
+      }
+    }
+    &--3 {
+      width: 30rem;
+      @include respond(tabport) {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.landing {
+  display: grid;
+  grid-template-rows: 1fr 1fr max-content 1fr;
+
+  &__row {
+    &--1 {
+      display: flex;
+      align-items: center;
+      @include respond(tabport) {
+        flex-direction: column;
+        gap: 8rem;
+      }
+    }
+
+    &--2 {
+      margin-top: -6rem;
+    }
+
+    &--3 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: -15rem;
+      @include respond(tabport) {
+        flex-direction: column;
+        gap: 8rem;
+        margin-top: -25rem;
+      }
+    }
+    &--4 {
+      display: flex;
+      flex-direction: row-reverse;
+      position: relative;
+    }
+  }
+
+  &__title {
+    font-size: 7rem;
+    font-weight: bold;
+    color: var(--white);
+    flex-basis: 50%;
+    line-height: 8rem;
+    @include respond(tabport) {
+      width: 75%;
+    }
+  }
+  &__image {
+    display: block;
+    box-shadow: 0 0rem 1.2rem 0.1rem rgba(0, 0, 0, 0.2);
+
+    &--1 {
+      width: 45rem;
+      flex: 1;
+      @include respond(tabport) {
+        align-self: flex-end;
+      }
+    }
+    &--2 {
+      width: 80rem;
+      @include respond(tabport) {
+        width: 70rem;
+      }
+    }
+    &--3 {
+      width: 80rem;
+      height: 40rem;
+      @include respond(tabport) {
+        width: 55rem;
+      }
+    }
+
+    &--4 {
+      position: absolute;
+      left: 0;
+      top: 10rem;
+      width: 60rem;
+      @include respond(tabport) {
+        top: 20rem;
+        left: 20%;
+      }
+    }
+  }
+
+  &__shape {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    background-color: transparent;
+    border: 4.5rem solid var(--white);
+    border-radius: 50%;
+    align-self: center;
+    margin-left: 3rem;
+    @include respond(tabport) {
+      align-self: start;
+      margin-left: 0;
+    }
+  }
+
+  &__sub-title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+}

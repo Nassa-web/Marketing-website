@@ -1,0 +1,18 @@
+.card {
+  background-color: var(--white);
+  box-shadow: 0 0rem 1.2rem 0.1rem rgba(0, 0, 0, 0);
+  border-radius: 5px;
+}
+
+.card--1 {
+  width: 45%;
+  padding: 3rem;
+  margin-right: 8rem;
+  @include respond(tabport) {
+    width: 70%;
+  }
+}
+
+.card--2 {
+  padding: 7rem;
+}
